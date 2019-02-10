@@ -1,0 +1,251 @@
+<div class="container-fluid" style=" background-color:#EAF0F6" class="dvCont">
+    <div class="row justify-content-center" style="padding-top:5%">
+        <div class="col-6">
+            <div class="line">
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-8 align-self-center" style="height:100vh">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="clearfix">
+                        <p class=" float-left font-weight-bold nopadding">Manage Family</p>
+                        <p class=" float-right font-weight-bold nopadding">Help?</p>
+                    </div>
+                    <div *ngIf="!clicked">
+                        <div class="card text-center  ">
+                            <div class="card-header cardHeader text-center">
+                                choose the family members from the list of contacts you uploded
+                            </div>
+                            <div class="card-body ">
+
+                                <div class="row">
+                                    <div class="col-12" style="display:flex;justify-content:center;align-items:center">
+                                        <table style="width:80%;height:2vh;cursor:pointer" data-toggle="modal" data-target="#exampleModalCenter1">
+                                            <tr>
+                                                <th rowspan="2" style="width:30%;height:70%; padding-top:5%" class="tab">Family Members
+                                                    <br>
+                                                    <p style="font-size:1.5rem">{{identifiedContacts.length}}</p>
+                                                </th>
+                                                <td class="ro1">
+                                                    <div style="float:left;padding-left:30px;color:#777777">Your Family members are listed here</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ro2">
+                                                    <div style="float:right;padding-right:30px;">Check your Friends <i class="fa fa-arrow-right" style="color:black"></i></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </div>
+
+                                <div class="row" style="padding-top:5%">
+                                    <div class="col-12" style="display:flex;justify-content:center;align-items:center">
+                                        <table style="width:80%;height:5vh;cursor:pointer" (click)="openModel()" data-toggle="modal" data-target="#exampleModalCenter">
+                                            <tr>
+                                                <th rowspan="2" style="width:30%;height:70% ; padding-top:5%" class="tab1">Unidentified
+                                                    <br>
+                                                    <p style="font-size:1.5rem">{{unidentifiedContacts.length}}</p>
+                                                </th>
+                                                <td class="ro3">
+                                                    <div style="float:left;padding-left:30px;color:#777777">Choose your family members and
+                                                        <br>their relation to you</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ro4">
+                                                    <div style="float:right;padding-right:30px;">choose from this list <i class="fa fa-arrow-right" style="color:black"></i></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-8 align-self-center offset-md-2" *ngIf="successMessage">
+                    <div class="alert alert-dark" role="alert">
+                        Wohoo!! A new Family Member Added
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+
+        <div style="float:right">
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+
+                    <div *ngIf="contactFlag">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle" style="padding-bottom:20px">Unidentified({{unidentifiedContacts.length}})</h5>
+                                <button type="button" class="close" id="cls" data-dismiss="modal" aria-label="Close" style="color:white">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="background-color:#EAF0F6;overflow-y: scroll;">
+
+                                <div style="padding-bottom:20px">Click a contact and select who is to you.</div>
+
+                                <div class="container-fluid">
+
+                                    <div class="row" style="height:20vh;padding-bottom:30px;box-sizing:border-box; display: flex;" *ngFor="let unidentifiedContact of unidentifiedContacts">
+
+                                        <div class="col-9" style="background-color:white;-moz-box-shadow: 6px 6px 5px #CCC;
+                          -webkit-box-shadow: 6px 6px 5px #CCC;
+                          box-shadow: 6px 6px 5px #CCC;cursor:pointer" (click)="showContactDetails(unidentifiedContact.id);">
+                                            {{unidentifiedContact.name|uppercase}}
+                                            <br>
+                                            <div style="padding-top:25px;">
+                                                <span class="clearfix">
+                                  <span  class=" float-left"> <i class="fa fa-envelope" style="color:#F05C40"></i><span style="font-size:10px">{{unidentifiedContact.emailId}}</span></span>
+                                                <span class="float-right"><i class="fa fa-whatsapp" style="color:#F05C40"></i><span style="font-size:10px"> {{unidentifiedContact.phoneNumber}}</span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-3" style="background-color:#B2C1D1;-moz-box-shadow: 6px 6px 5px #CCC;
+                          -webkit-box-shadow: 6px 6px 5px #CCC;
+                          box-shadow: 6px 6px 5px #CCC; display:flex;justify-content:center;align-items:center;cursor:pointer" (click)="showContactDetails(unidentifiedContact.id)">
+                                            <i class="fa fa-arrow-right" style="color:white"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div *ngIf="!contactFlag">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle" style="padding-bottom:10px">{{selectedContact[0].name}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white" (click)="closeModel()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="background-color:#EAF0F6;overflow-y: scroll;">
+
+                                <div style="width:100%;height:20vh;background-color:white;padding-top:20px">
+                                    <div style="padding-left:40px;padding-bottom:20px"> who is '{{selectedContact[0].name}}' to you?</div>
+
+                                    <div style="padding-left:60px">
+
+                                        <span style="background-color:#F05C40;color:white;border-radius:25%;font-size:10px;padding-left:4px;padding-right:4px">AGE</span ><span style="padding-left:5px;">{{selectedContact[0].age}}</span>
+                                        <span style="padding-left:60px;"> <i class="fa fa-location-arrow " style="color:#F05C40"></i>{{selectedContact[0].place}}</span>
+                                    </div>
+                                    <div style="padding-top:30px;">
+                                        <p style="padding-bottom:20px"> select one of them to help us identify
+                                            <br> the correct family member</p>
+                                        <div [ngClass]="status ? 'alert alert-success text-center' : 'alert alert-light text-center'" role="alert" style="cursor:pointer" (click)="status1=0;status2=0;status3=0;status=!status;selectedOption($event)">
+                                            Father
+                                        </div>
+                                        <div [ngClass]="status1 ? 'alert alert-success text-center' : 'alert alert-light text-center'" role="alert" style="cursor:pointer" (click)="status=0;status2=0;status3=0;status1=!status1;selectedOption($event)">
+                                            mother
+                                        </div>
+                                        <div [ngClass]="status2 ? 'alert alert-success text-center' : 'alert alert-light text-center'" role="alert" style="cursor:pointer" (click)="status1=0;status=0;status3=0;status2=!status2;selectedOption($event)">
+                                            brother
+                                        </div>
+                                        <div [ngClass]="status3 ? 'alert alert-success text-center' : 'alert alert-light text-center'" role="alert" style="cursor:pointer" (click)="status=0;status2=0;status=0;status3=!status3;selectedOption($event)">
+                                            sister
+                                        </div>
+
+                                        <div class="row" *ngIf="status||status1||status2||status3">
+                                            <div class="col-sm-12">
+                                                <div class="text-center">
+                                                    <button class="btn btn-dark" id="singlebutton" data-dismiss="exampleModalLongTitle" (click)="submit();status=status1=status2=status3=false"> SELECT</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div style="float:right">
+            <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle" style="padding-bottom:20px">Family Members({{identifiedContacts.length}})</h5>
+                            <button type="button" class="close" id="cls" data-dismiss="modal" aria-label="Close" style="color:white">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="background-color:#EAF0F6;overflow-y: scroll;">
+
+                            <div style="padding-bottom:20px">Click a contact and select who is to you.</div>
+
+                            <div class="container">
+
+                                <div class="row" style="height:20vh;padding-bottom:30px;box-sizing:border-box; display: flex;" *ngFor="let identifiedContact of identifiedContacts">
+
+                                    <div class="col-9" style="background-color:white;-moz-box-shadow: 6px 6px 5px #CCC;
+                          -webkit-box-shadow: 6px 6px 5px #CCC;
+                          box-shadow: 6px 6px 5px #CCC;cursor:pointer">
+                                        {{identifiedContact.name|uppercase}}
+                                        <br>
+                                        <div style="padding-top:25px;">
+                                            <span class="clearfix">
+                                  <span  class=" float-left"> <i class="fa fa-envelope" style="color:#F05C40"></i><span style="font-size:10px">{{identifiedContact.emailId}}</span></span>
+                                            <span class="float-right"><i class="fa fa-whatsapp" style="color:#F05C40"></i><span style="font-size:10px"> {{identifiedContact.phoneNumber}}</span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-3" style="background-color:#00BE6E;-moz-box-shadow: 6px 6px 5px #CCC;
+                          -webkit-box-shadow: 6px 6px 5px #CCC;
+                          box-shadow: 6px 6px 5px #CCC; display:flex;justify-content:center;align-items:center;cursor:pointer">
+                                        <p style="color:white">{{identifiedContact.relation}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

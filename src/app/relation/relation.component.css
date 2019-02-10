@@ -1,0 +1,180 @@
+:root { font-size: 24px !important; }
+.header{
+    background-color:#00BE6E;
+    display: block;
+    margin: 0%;
+   height:  1%;
+   padding: 1%;
+    color: white;
+    font-size:1.5vw;
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+
+.cardHeader{
+    background-color:#33475B;
+    color: white;
+    width: 100%;
+    font-size: 1.5vw;
+   
+}
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+
+
+
+.figstyle{
+    padding-top:5%;
+    padding-left: 5%;
+    color:#33475B;
+    font-weight:bold;
+    font-size:0.5vm;
+    white-space: nowrap;
+}
+
+.centerblock{
+    display: table;
+  margin: auto;
+}
+
+.line {
+	border-top: 2px solid #33475B;
+	padding-top:25px;
+    padding-bottom: 25px;
+	margin: 20px auto 0;
+	width: 70%;
+	position: relative;
+}
+
+.line:before {
+	content: "";
+	width: 25px;
+	height: 25px;
+    background: #33475B;
+    border-color: #33475B;
+    border-style: solid;
+	border-radius: 50%;
+	position: absolute;
+	top: -11px;
+}
+
+.line:after {
+    content: "";
+	width: 25px;
+	height: 25px;
+	background:white;
+	border-radius: 50%;
+    position: absolute;
+    border-color: #33475B;
+    border-style: solid;
+	top: -11px;
+	right: 0;
+}
+ 
+.spin{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.spinitem{
+    align-self:center;
+}
+
+.spin1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.box{
+    display: flex;
+    padding: 5%;
+    border-radius: 50%;
+    height: 100%;
+ 
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    border: 1px;
+    width: 80%;
+    padding-left: 10%;
+    box-shadow: 5px black;
+    
+  }
+.tab{
+    background-color: #00BE6E;
+    border-top-left-radius:10px;
+    border-bottom-left-radius: 10px;
+    font-size:1.5vw;
+   
+}
+
+.ro1{
+    background-color: #FAFAFA;
+    border-top-right-radius: 10px;
+    font-size:1.5vw;
+
+}
+
+.ro2{
+    background-color: #E0F3EB;
+    border-bottom-right-radius: 10px;
+    font-size:1.5vw;
+}
+.ro3{
+    background-color: #E0F3EB;
+    border-top-right-radius: 10px;
+    font-size:1.5vw;
+}
+.ro4{
+    background-color: #F7F1E0;
+    border-bottom-right-radius: 10px;
+    font-size:1.5vw;
+}
+
+.tab1{
+    background-color: #E6AA00;
+    border-top-left-radius:10px;
+    border-bottom-left-radius: 10px;
+    font-size:1.5vw;
+   
+}
+
+
+  .modal-content {
+    height: 100vh; /* = 100% of the .modal-dialog block */
+    width:30vw;
+  }
+  .modal-dialog {
+    height: 80vh;
+    position: fixed;
+    
+    left: 70%;
+    width:30vw;
+    padding: 0%;
+   
+  }
+
+  .modal-header{
+      height: 10%;
+      background-color: #33475B;
+      color:white;
+      width:30vw;
+  }
+

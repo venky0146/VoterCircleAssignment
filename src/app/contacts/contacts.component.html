@@ -1,0 +1,98 @@
+<div class="container-fluid" style=" background-color:#EAF0F6">
+
+    <div class="row justify-content-center" style="padding-top:5%">
+        <div class="col-6">
+            <div class="line">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-9 align-self-center" style="height:100vh">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="clearfix">
+                        <p class=" float-left font-weight-bold nopadding">Import your Contacts</p>
+                        <p class=" float-right font-weight-bold nopadding">Help?</p>
+                    </div>
+                    <div *ngIf="!clicked">
+                        <div class="card">
+                            <div class="card-header cardHeader text-center">
+                                Select a platform to import contacts
+                            </div>
+                            <div class="card-body" style="margin-right: 0;
+               margin-left: 0;padding-right: 0;
+               padding-left: 0;">
+                                <div class="container" style="padding:5%;">
+
+                                    <div class="row justify-content-start ">
+                                        <div class="col-4 col-xs-4">
+                                            <div class="centerblock">
+                                                <figure>
+                                                    <button class="btn  rounded-circle shadow p-3 mb-auto bg-white rounded img-responsive " (click)="onClickMe()"><i class="fa fa-google  " style="font-size: 2em;"></i></button>
+                                                    <figcaption class="figstyle"> GOOGLE </figcaption>
+                                                </figure>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-4 col-xs-4">
+                                            <div class="centerblock">
+
+                                                <figure>
+                                                    <button class="btn btn-block rounded-circle shadow p-3 mb-auto bg-white rounded img-responsive" (click)="onClickMe()"><i class="fa fa-facebook-square  " style="font-size: 2em;"></i></button>
+                                                    <figcaption class="figstyle"> FACEBOOK </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-xs-4">
+                                            <div class="centerblock">
+                                                <figure>
+                                                    <button class="btn btn-block rounded-circle shadow p-3 mb-auto bg-white rounded img-responsive" (click)="onClickMe()"><i class="fa fa-id-card " style="font-size: 2em;"></i></button>
+                                                    <figcaption class="figstyle"> CONTACT </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div *ngIf="clicked">
+                        <div class="card">
+                            <div class="card-header cardHeader text-center">
+                                Fetching Contacts...
+                            </div>
+                            <div class="card-body" style="margin-right: 0;
+                     margin-left: 0;padding-right: 0;
+                     padding-left: 0;">
+                                <div class="spin">
+                                    <div class="spinitem">
+
+                                        <fa name="spinner" animation="spin " style="color:green;font-size:70px"></fa>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="spin1">
+                                    <div class="spinitem1">
+                                        <p>Please wait while we fetch your contacts...</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

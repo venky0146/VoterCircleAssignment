@@ -1,0 +1,144 @@
+
+:root { font-size: 1rem !important; }
+.header{
+    background-color:#00BE6E;
+    display: block;
+    margin: 0%;
+   height:  1%;
+   padding: 1%;
+    color: white;
+    font-size: 1rem;
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+
+.cardHeader{
+    background-color:#33475B;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+   
+}
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+
+
+
+.figstyle{
+    padding-top:20%;
+    padding-left: 24%;
+    color:#33475B;
+    font-weight:bold;
+    font-size:0.5rem;
+    white-space: nowrap;
+}
+
+.centerblock{
+    display: table;
+  margin: auto;
+}
+
+.line {
+	border-top: 2px solid white;
+	padding-top:25px;
+    padding-bottom: 25px;
+	margin: 20px auto 0;
+	width: 70%;
+	position: relative;
+}
+
+.line:before {
+	content: "";
+	width: 25px;
+	height: 25px;
+    background: white;
+    border-color: #33475B;
+    border-style: solid;
+	border-radius: 50%;
+	position: absolute;
+	top: -11px;
+}
+
+.line:after {
+    content: "";
+	width: 25px;
+	height: 25px;
+	background:white;
+	border-radius: 50%;
+	position: absolute;
+	top: -11px;
+	right: 0;
+}
+ 
+.spin{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.spinitem{
+    align-self:center;
+}
+
+.spin1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+
+
+
+
+
+@media (min-width: 576px) {
+    .cardHeader{
+       background-color:#33475B;
+       color: white;
+       width: 100%;
+       font-size: 0.4rem;
+       white-space: initial !important;
+
+      
+   } }
+
+@media (min-width: 768px) {
+   .cardHeader{
+       background-color:#33475B;
+       color: white;
+       width: 100%;
+       font-size: 1rem;
+       
+      
+   }
+}
+@media (min-width: 992px) {
+   .cardHeader{
+       background-color:#33475B;
+       color: white;
+       width: 100%;
+       font-size: 1rem;
+      
+   }
+}
+@media (min-width: 1200px) {
+   .cardHeader{
+       background-color:#33475B;
+       color: white;
+       width: 100%;
+       font-size: 1rem;
+      
+   }
+}

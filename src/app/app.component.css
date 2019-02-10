@@ -1,0 +1,96 @@
+.header{
+    background-color:#00BE6E;
+    display: block;
+    margin: 0%;
+   height:  1%;
+   padding: 1%;
+    color: white;
+    font-size: 24px;
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+
+.cardHeader{
+    background-color:#33475B;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+   
+}
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+
+
+
+.figstyle{
+    padding-top:5%;
+    padding-left: 5%;
+    color:#33475B;
+    font-weight:bold;
+    font-size:12px;
+    white-space: nowrap;
+}
+
+.centerblock{
+    display: table;
+  margin: auto;
+}
+
+.line {
+	border-top: 2px solid white;
+	padding-top:25px;
+    padding-bottom: 25px;
+	margin: 20px auto 0;
+	width: 70%;
+	position: relative;
+}
+
+.line:before {
+	content: "";
+	width: 25px;
+	height: 25px;
+    background: white;
+    border-color: #33475B;
+    border-style: solid;
+	border-radius: 50%;
+	position: absolute;
+	top: -11px;
+}
+
+.line:after {
+    content: "";
+	width: 25px;
+	height: 25px;
+	background:white;
+	border-radius: 50%;
+	position: absolute;
+	top: -11px;
+	right: 0;
+}
+ 
+.spin{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.spinitem{
+    align-self:center;
+}
+
+.spin1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
